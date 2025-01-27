@@ -1,0 +1,211 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+/* CLASES NAVBAR */
+.navBar{
+  display: flex;
+  background-color: rgb(46, 45, 45);
+  justify-content: space-between;
+  color: white;
+  padding: 5px;
+  
+}
+
+.containerNav{
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+
+.menu{
+  display: flex;
+  gap: 10px;
+}
+
+.tituloNav{
+  margin-top: 5px;
+}
+/* Clases HEADER */
+.header{
+  background-image:url(./assets/imgs/Header.jpg);
+  background-position: center;
+  color: white;
+  height: 16rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+/* CLASES MAIN */
+.cards{
+  text-align: center;
+  /* border: 1px solid red; */
+  margin-bottom: 15px;
+
+}
+
+.cardContainer{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  width: 100%;
+  margin-top: 1rem;
+  /* border: 1px solid red; */
+}
+
+.description{
+  height: 15rem;
+  text-align: justify;
+}
+
+.ingredients{
+  text-align:left;
+  /* border: 1px solid red; */
+  margin-left: 25px;
+}
+main{
+  background-color: rgb(247, 245, 243);
+  margin-bottom: 1rem;
+}
+
+.containerButtons{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+/* CARRO COMPRAS */
+.cart{
+  background-color: rgb(247, 245, 243);
+  min-height: 100vh;
+
+}
+.container-cards-carro{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+.cards-carro{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid gray;
+  align-items: center;
+  width: 80%;
+  gap: 3rem;
+ /*  justify-content: space-around; */
+}
+.img-carro{
+  width: 30%;
+}
+.name-pizza{
+  width: 20%;
+}
+.price-pizza{
+  width: 10%;
+}
+/* FOOTER */
+footer{
+  background-color: rgb(46, 45, 45);
+  color: white;
+  text-align: center;
+}
+
+/* FORMULARIOS */
+.contenedorFormulario{
+  background-color: rgb(247, 245, 243);
+
+}
+
+.formulario{
+  width: 50%;
+  text-align: center;
+  margin-left: 25%;
+  min-height: 89vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.error{
+  padding: 10px;
+color: white;
+background-color: red;
+text-align: center;
+font-weight: bold;
+border-radius: 10px;
+
+}
+
+/* COMPONENTE PIZZA */
+
+.main-pizza-container{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(247, 245, 243);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+.pizza-container{
+  display: flex;
+  border: 1px solid gray;
+  align-items:center;
+  justify-content: center;
+  height: auto;
+  flex-direction: column;
+  width: 50%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: justify;
+}
+
+.pizza-container img{
+  width: 70%;
+  object-fit: contain;
+  border: 1px solid gray;
+  background-color: white;
+}
+.description-pizza{
+  margin: 10px;
+}
+
+/* NOTFOUND */
+
+.notFound{
+  min-height: 100vh;
+  background-color: rgb(247, 245, 243);
+  
+}
+
+/* PROFILE */
+
+.profile{
+  min-height: 100vh;
+  background-color: rgb(247, 245, 243);
+  display: flex;
+  
+}
+
+.containerProfile{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+}
