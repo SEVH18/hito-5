@@ -11,7 +11,7 @@ import { Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
 function App() {
- 
+ //PRUEBA
   return (
     <>
       <Navbar />
