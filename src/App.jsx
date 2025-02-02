@@ -10,13 +10,14 @@ import Pizza from './pages/Pizza';
 import { Routes, Route } from 'react-router-dom';
 import NotFound from './pages/NotFound';
 import Profile from './pages/Profile';
+import CartProvider from './context/CartContext';
 function App() {
- //PRUEBA
+
   return (
     <>
       <Navbar />
+      <CartProvider>
       <Routes>
-   
         <Route path='/' element={<Home />} />
         <Route path='/login' element={<LoginPage />} />
         <Route path='/register' element={<Register />} />
@@ -26,6 +27,7 @@ function App() {
         <Route path='*' element={<NotFound />} />
         <Route path='/profile' element={<Profile /> } />
       </Routes>
+      </CartProvider>
       <Footer />
     </>
   );
