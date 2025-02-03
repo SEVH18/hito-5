@@ -7,14 +7,13 @@ import { CartContext } from "../context/CartContext";
 
 
 
-function CardPizza({ name, price, ingredients, img, description }) {
-  const { cartPizzas, setPizza } = useContext(CartContext)
-  const [prueba, setPrueba] = useState({})
-  const funcion = () => {
-    setPrueba({name, price, img, count: 1} )
-
+function CardPizza({ name, price, ingredients, img, description, id }) {
+  const {addPizzaToCart} = useContext(CartContext)
+  const handleCallPizza = () => {
+    addPizzaToCart({ name, price, img, id })
+    console.log("se agregó", addPizzaToCart)
   }
-console.log(prueba)
+
   return (
     <div className="cards">
       <Card style={{ width: "18rem" }}>
@@ -43,7 +42,7 @@ console.log(prueba)
           <h3>Precio: ${price}</h3>
           <div className="containerButtons">
             <Button variant="secondary">Ver más &#128064;</Button>
-            <Button variant="dark" onClick={() => funcion()}>Añadir &#128722;</Button>
+            <Button variant="dark" onClick={handleCallPizza}>Añadir &#128722;</Button>
           </div>
         </Card.Body>
       </Card>

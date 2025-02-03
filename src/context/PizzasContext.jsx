@@ -13,7 +13,7 @@ const [pizzas, setPizza] = useState([]);
     };
    
     return (
-        <PizzasContext.Provider value={{ pizzas, getData }}>
+        <PizzasContext.Provider value={{ pizzas, getData, setPizza }}>
             {children}
         </PizzasContext.Provider>
     )

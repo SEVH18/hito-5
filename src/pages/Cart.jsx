@@ -1,10 +1,10 @@
 import React from 'react'
 import Button from "react-bootstrap/Button";
-import { useContext, useEffect } from 'react';
+import { useContext} from 'react';
 import { CartContext } from '../context/CartContext';
 const Cart = () => {
   
-  const {cartPizzas, setPizza, total, agregarUnidad, restarUnidad} = useContext(CartContext)
+  const {cartPizzas, total, agregarUnidad, restarUnidad} = useContext(CartContext)
 
   
   return(
