@@ -1,25 +1,18 @@
 import CardPizza from "../components/CardPizza";
 import Header from "../components/Header";
-import { useEffect, useState } from "react";
-
+import { useEffect} from "react";
+import { useContext } from "react";
+import { PizzasContext } from "../context/PizzasContext";
+import { CartContext } from "../context/CartContext";
 const Home = () => {
-  const [pizzas, setPizza] = useState([]);
-
-  const url = "http://localhost:5000/api/pizzas";
-
-  const getData = async () => {
-    const response = await fetch(url);
-    const data = await response.json()
-    setPizza(data)
-  };
-
+  const { pizzas, getData } = useContext(PizzasContext)
   useEffect(() => {
   getData()
-}, [])
+  }, [])
+  
   return (
     <main>
       <Header />
-
       <div className="cardContainer">
         {pizzas.map((pizza) => (
           <CardPizza
@@ -29,6 +22,7 @@ const Home = () => {
             img={pizza.img}
             ingredients={pizza.ingredients}
             description={pizza.desc}
+            id={pizza.id}
           />
         ))}
       </div>

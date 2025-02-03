@@ -1,8 +1,12 @@
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 const Navbar = () => {
-  const total = 25000;
+ const {total} = useContext(CartContext)
+
+  const totalNav = total;
   const token = false;
   return (
     <nav className="navBar">

@@ -1,10 +1,19 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 
-function CardPizza({ name, price, ingredients, img, description }) {
+function CardPizza({ name, price, ingredients, img, description, id }) {
+  const {addPizzaToCart} = useContext(CartContext)
+  const handleCallPizza = () => {
+    addPizzaToCart({ name, price, img, id })
+    console.log("se agregó", addPizzaToCart)
+  }
+
   return (
     <div className="cards">
       <Card style={{ width: "18rem" }}>
@@ -33,7 +42,7 @@ function CardPizza({ name, price, ingredients, img, description }) {
           <h3>Precio: ${price}</h3>
           <div className="containerButtons">
             <Button variant="secondary">Ver más &#128064;</Button>
-            <Button variant="dark">Añadir &#128722;</Button>
+            <Button variant="dark" onClick={handleCallPizza}>Añadir &#128722;</Button>
           </div>
         </Card.Body>
       </Card>
