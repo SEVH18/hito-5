@@ -1,18 +1,18 @@
 import CardPizza from "../components/CardPizza";
 import Header from "../components/Header";
-import { useEffect, useState } from "react";
+import { useEffect} from "react";
 import { useContext } from "react";
+import { PizzasContext } from "../context/PizzasContext";
 import { CartContext } from "../context/CartContext";
-
 const Home = () => {
- const {pizzas, getData} = useContext(CartContext)
+  const { pizzas, getData } = useContext(PizzasContext)
   useEffect(() => {
   getData()
-}, [])
+  }, [])
+  
   return (
     <main>
       <Header />
-
       <div className="cardContainer">
         {pizzas.map((pizza) => (
           <CardPizza

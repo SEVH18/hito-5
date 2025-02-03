@@ -1,10 +1,20 @@
 import Card from "react-bootstrap/Card";
 import ListGroup from "react-bootstrap/ListGroup";
 import Button from "react-bootstrap/Button";
+import { useState } from "react";
+import { useContext } from "react";
+import { CartContext } from "../context/CartContext";
 
 
 
 function CardPizza({ name, price, ingredients, img, description }) {
+  const { cartPizzas, setPizza } = useContext(CartContext)
+  const [prueba, setPrueba] = useState({})
+  const funcion = () => {
+    setPrueba({name, price, img, count: 1} )
+
+  }
+console.log(prueba)
   return (
     <div className="cards">
       <Card style={{ width: "18rem" }}>
@@ -33,7 +43,7 @@ function CardPizza({ name, price, ingredients, img, description }) {
           <h3>Precio: ${price}</h3>
           <div className="containerButtons">
             <Button variant="secondary">Ver más &#128064;</Button>
-            <Button variant="dark">Añadir &#128722;</Button>
+            <Button variant="dark" onClick={() => funcion()}>Añadir &#128722;</Button>
           </div>
         </Card.Body>
       </Card>
